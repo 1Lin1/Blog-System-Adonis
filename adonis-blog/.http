@@ -1,0 +1,81 @@
+@url = http://127.0.0.1:3333/admin/api
+
+###
+get {{url}}/api/admin/site
+
+
+
+
+
+###获取全部博客数据
+get {{url}}/posts
+
+
+###通过id获取单个博客
+get {{url}}/posts/5e76e3dab9b0e727049952a0
+
+.
+###增加文章
+post {{url}}/posts
+Content-Type: application/json
+
+{
+    "title":"我的博客文章2"
+}
+
+###更新文章
+PUT {{url}}/posts/5e76e3dab9b0e727049952a0
+Content-Type: application/json
+
+{
+    "title":"我的超级博客文章"
+}
+
+
+###删除文章
+DELETE {{url}}/posts/5e760f7e272bbc1bc475f1e0
+
+
+
+
+
+
+###创建学生表测试
+get {{url}}/student/create
+Content-Type: application/json
+
+{
+    "name":"mike",
+    "age":18,
+    "sex":"male"
+}
+
+###查询全部学生信息
+get {{url}}/student
+
+###增加一个新学生
+post {{url}}/student
+Content-Type: application/json
+
+{
+    "name":"rose",
+    "age":"15",
+    "sex":"female"
+}
+
+
+###查询学生
+get {{url}}/student/5e76ff611e98a427d0e5cf28
+
+
+###更改某个学生信息
+PUT  {{url}}/student/5e76ff611e98a427d0e5cf28
+Content-Type: application/json
+
+{
+    "name":"lisss232n11h",
+    "sex":"female"
+}
+
+###删除学生
+delete {{url}}/student/5e7700bbb1be0217206a0110
